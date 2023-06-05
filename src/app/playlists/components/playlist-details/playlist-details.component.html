@@ -7,14 +7,20 @@
   <dd>{{ playlist.name }}</dd>
 
   <dt>Public</dt>
-  <dd>{{ playlist.public ? "Yes" : "No" }}</dd>
+  
+  <!-- <dd [style.color]="playlist.public ? 'red' : 'green'">
+    {{ playlist.public ? "Yes" : "No" }}
+  </dd> -->
+
+  <dd  [class]="playlist.public ? 'isPublic' : 'isPrivate'">
+    {{ playlist.public ? "Yes" : "No" }}
+  </dd>
 
   <dt>Description</dt>
   <dd>{{ playlist.description }}</dd>
 </dl>
 
 <button class="btn btn-primary mt-2">Edit</button>
-
 
 <!-- {{ text }} -->
 <!-- [props]=value -->
