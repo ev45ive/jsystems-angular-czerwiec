@@ -11,6 +11,12 @@ v18.12.0
 npm -v
 8.19.2
 
+## NVM
+nvm
+nvm for windows
+nvm install 18
+nvm use 18
+
 ## GIT
 git -v
 git version 2.39.0.windows.1
