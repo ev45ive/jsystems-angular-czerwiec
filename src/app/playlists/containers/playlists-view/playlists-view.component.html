@@ -10,10 +10,13 @@
 
     <!-- {{text}}   [props]   (event)  #localRef  |pipe  *template -->
 
-    <ng-container ngSwitch="mode">
-      <app-playlist-details ngSwitchCase="details" />
-      <app-playlist-editor ngSwitchCase="mode" />
+    <ng-container [ngSwitch]="mode">
+      <app-playlist-details *ngSwitchDefault />
+      <app-playlist-editor *ngSwitchCase="  'editor'  " />
     </ng-container>
+
+    <!-- Error: NG02000: An element with the "ngSwitchCase" attribute (matching the "NgSwitchCase" directive) must be located inside an element with the "ngSwitch" attribute (matching "NgSwitch" directive) -->
+    <!-- <app-playlist-editor *ngSwitchCase="  'editor'  " /> -->
       
   </div>
 </div>
