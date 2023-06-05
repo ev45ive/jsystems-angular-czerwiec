@@ -1,13 +1,21 @@
+<dl
+  [id]="'playlist_' + playlist.id"
+  [title]="playlist.name"
+  [attr.data-playlist-id]="playlist.id"
+>
+  <dt>Name</dt>
+  <dd>{{ playlist.name }}</dd>
 
-<dl>
-    <dt>Name</dt>
-    <dd>Playlist ABC</dd>
+  <dt>Public</dt>
+  <dd>{{ playlist.public ? "Yes" : "No" }}</dd>
 
-    <dt>Public</dt>
-    <dd>Yes</dd>
-
-    <dt>Description</dt>
-    <dd>Test playlist</dd>
+  <dt>Description</dt>
+  <dd>{{ playlist.description }}</dd>
 </dl>
 
 <button class="btn btn-primary mt-2">Edit</button>
+
+
+<!-- {{ text }} -->
+<!-- [props]=value -->
+<!-- [attr.name]=value -->
