@@ -12,6 +12,7 @@
   <dd [style.color]="playlist.public ? 'red' : 'green'">
     {{ playlist.public ? "Yes" : "No" }}
   </dd>
+  
   <!-- Multiple styles values -->
   <dd
     [ngStyle]="{
@@ -32,6 +33,7 @@
       [class.isPrivate]="!playlist.public">
     {{ playlist.public ? "Yes" : "No" }}
   </dd>
+
 
   <!-- Multiple Classes on/off -->
   <dd
