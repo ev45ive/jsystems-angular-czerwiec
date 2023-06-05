@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./playlist-details.component.scss'],
 })
 export class PlaylistDetailsComponent {
+ 
   playlist = {
     id: '123',
     name: 'Playlist 123',

@@ -8,7 +8,10 @@
     id="playlist_name"
     placeholder="Name"
     [value]="playlist.name"
+
+    (input)=" playlist.name = $any( $event.target ).value "
   />
+  <small class="text-muted float-end">{{ playlist.name.length }} / 100</small>
 </div>
 
 <div class="form-check">
