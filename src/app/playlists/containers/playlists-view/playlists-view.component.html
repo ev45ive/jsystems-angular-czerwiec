@@ -3,11 +3,12 @@
     <app-playlist-list />
   </div>
   <div class="col">
-    <button class="btn btn-primary mt-2" (click)="(0)">Edit</button>
-    <button class="btn btn-danger">Details</button>
+    <button class="btn btn-primary" (click)="showEditor()">Edit</button>
+    <button class="btn btn-danger" (click)="showDetails()">Details</button>
+    
     {{ mode }}
 
-    <app-playlist-details [hidden]="false" />
-    <app-playlist-editor [hidden]="true" />
+    <app-playlist-details [hidden]=" mode !== 'details' " />
+    <app-playlist-editor [hidden]=" mode !== 'editor' " />
   </div>
 </div>

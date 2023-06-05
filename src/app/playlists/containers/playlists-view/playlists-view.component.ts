@@ -10,10 +10,10 @@ export class PlaylistsViewComponent {
   mode: 'details' | 'editor' = 'details';
 
   showEditor(){
-    // ???
+    this.mode = 'editor'
   }
-
-  shoeDetails(){
-  // ??
+  
+  showDetails(){
+    this.mode = 'details'
   }
 }
