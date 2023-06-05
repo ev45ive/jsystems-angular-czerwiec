@@ -79,3 +79,17 @@ ng s -o
 ## Core module
 ng g m core -m app
 ng g c core/components/navbar --export 
+
+ng g m shared -m app
+ng g c shared/components/button --export
+
+## Playlist 
+
+ng g m playlists --routing --route playlists -m app
+ng g c playlists/containers/playlists-view 
+
+ng g c playlists/components/playlist-details
+ng g c playlists/components/playlist-list
+ng g c playlists/components/playlist-editor
+
+
