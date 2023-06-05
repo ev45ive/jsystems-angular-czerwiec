@@ -31,6 +31,11 @@ https://angular.io/guide/devtools
 
 https://chrome.google.com/webstore/detail/angular-devtools/ienfalfjdbdpebioblfackkekamfmbnh
 
+
+## VS Code extensions
+https://marketplace.visualstudio.com/items?itemName=Angular.ng-template
+https://marketplace.visualstudio.com/items?itemName=Mikael.Angular-BeastCode
+https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme
 ## Remote
 
 Kto, nd, nazwa, ip, user, password
