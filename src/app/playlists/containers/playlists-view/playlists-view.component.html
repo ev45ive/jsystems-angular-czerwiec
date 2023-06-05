@@ -8,15 +8,29 @@
 
     {{ mode }}
 
+    <ng-template
+      [ngIf]="mode === 'details'"
+      [ngIfThen]="detailsTplRef"
+      [ngIfElse]="editorTplRef"
+    />
+
     <!-- Error: NG0201: No provider for TemplateRef found. Find more at https://angular.io/errors/NG0201 -->
     <!-- <app-playlist-details [ngIf]="true" /> -->
 
-    <ng-template [ngIf]=" mode === 'details' ">
+    <!-- <ng-template [ngIf]=" mode === 'details' ">
       <app-playlist-details />
     </ng-template>
     
     <ng-template [ngIf]=" mode === 'editor' ">
       <app-playlist-editor />
-    </ng-template>
+    </ng-template> -->
   </div>
 </div>
+
+<ng-template #detailsTplRef>
+  <app-playlist-details />
+</ng-template>
+
+<ng-template #editorTplRef>
+  <app-playlist-editor />
+</ng-template>
