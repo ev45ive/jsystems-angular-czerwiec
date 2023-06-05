@@ -8,6 +8,7 @@ import { PlaylistDetailsComponent } from './components/playlist-details/playlist
 import { PlaylistListComponent } from './components/playlist-list/playlist-list.component';
 import { PlaylistEditorComponent } from './components/playlist-editor/playlist-editor.component';
 
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { PlaylistEditorComponent } from './components/playlist-editor/playlist-e
   ],
   imports: [
     CommonModule,
+    FormsModule,
     PlaylistsRoutingModule
   ]
 })

@@ -2,28 +2,37 @@
 
 <div class="mb-3">
   <label for="playlist_name" class="form-label">Name</label>
+
   <input
+    #nameInputRef
     type="email"
     class="form-control"
     id="playlist_name"
     placeholder="Name"
-    [value]="playlist.name"
-    #nameInputRef
-    (input)="playlist.name = nameInputRef.value"
+    [(ngModel)]="playlist.name"
   />
+
+  <!-- [ngModel]="playlist.name"
+    (ngModelChange)=" playlist.name = $event " -->
+
+  <!-- [value]="playlist.name"
+    (input)="playlist.name = $any($event.target).value" -->
 
   <small class="text-muted float-end">{{ playlist.name.length }} / 100</small>
 </div>
 
 <div class="form-check">
   <input
+    #checkboxRef
     class="form-check-input"
     type="checkbox"
     id="playlist_public"
-    [checked]="playlist.public"
+    [ngModel]="playlist.public"
     (change)="playlist.public = $any($event.target).checked"
   />
-  <label class="form-check-label" for="playlist_public"> Public </label>
+  <label class="form-check-label" for="playlist_public">
+    Public {{ checkboxRef.checked }}</label
+  >
 </div>
 
 <div class="mb-3">
