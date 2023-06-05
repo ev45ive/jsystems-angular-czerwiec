@@ -75,3 +75,7 @@ npm run start
 npm start
 ng serve
 ng s -o
+
+## Core module
+ng g m core -m app
+ng g c core/components/navbar --export 
