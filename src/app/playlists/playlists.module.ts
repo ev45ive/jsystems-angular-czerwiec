@@ -9,6 +9,7 @@ import { PlaylistListComponent } from './components/playlist-list/playlist-list.
 import { PlaylistEditorComponent } from './components/playlist-editor/playlist-editor.component';
 
 import { FormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -19,8 +20,7 @@ import { FormsModule } from '@angular/forms';
     PlaylistEditorComponent
   ],
   imports: [
-    CommonModule,
-    FormsModule,
+    SharedModule,
     PlaylistsRoutingModule
   ]
 })
