@@ -12,4 +12,6 @@ export class PlaylistDetailsComponent {
     public: false,
     description: 'Best playlist',
   };
+  
+  
 }
