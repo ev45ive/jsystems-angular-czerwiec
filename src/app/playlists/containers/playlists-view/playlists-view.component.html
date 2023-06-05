@@ -6,52 +6,9 @@
     <button class="btn btn-primary" (click)="showEditor()">Edit</button>
     <button class="btn btn-danger" (click)="showDetails()">Details</button>
 
-    {{ mode }}
-
-    <!-- {{text}}   [props]   (event)  #localRef  |pipe  *template -->
-
     <ng-container [ngSwitch]="mode">
       <app-playlist-details *ngSwitchDefault />
-      <app-playlist-editor *ngSwitchCase="  'editor'  " />
+      <app-playlist-editor *ngSwitchCase="'editor'" />
     </ng-container>
-
-    <!-- Error: NG02000: An element with the "ngSwitchCase" attribute (matching the "NgSwitchCase" directive) must be located inside an element with the "ngSwitch" attribute (matching "NgSwitch" directive) -->
-    <!-- <app-playlist-editor *ngSwitchCase="  'editor'  " /> -->
-      
   </div>
 </div>
-
-<!-- 
-    <ng-template
-      [ngIf]="mode === 'details'"
-      [ngIfThen]="detailsTplRef"
-      [ngIfElse]="editorTplRef"
-    /> -->
-
-<!-- <ng-template [ngIf]=" mode === 'details' "> -->
-<!-- <app-playlist-details *ngIf="mode === 'details'" data-placki /> -->
-<!-- </ng-template> -->
-
-<!-- Template MicroSyntax -->
-<!-- <app-playlist-details
-      *ngIf="mode === 'details'; then detailsTplRef; else editorTplRef"
-    /> -->
-
-<!-- Error: NG0201: No provider for TemplateRef found. Find more at https://angular.io/errors/NG0201 -->
-<!-- <app-playlist-details [ngIf]="true" /> -->
-
-<!-- <ng-template [ngIf]=" mode === 'details' ">
-      <app-playlist-details />
-    </ng-template>
-    
-    <ng-template [ngIf]=" mode === 'editor' ">
-      <app-playlist-editor />
-    </ng-template> -->
-
-<ng-template #detailsTplRef>
-  <app-playlist-details />
-</ng-template>
-
-<ng-template #editorTplRef>
-  <app-playlist-editor />
-</ng-template>
