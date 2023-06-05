@@ -15,10 +15,13 @@
     />
 
     <!-- <ng-template [ngIf]=" mode === 'details' "> -->
-      <app-playlist-details *ngIf=" mode === 'details' "    data-placki />
+    <app-playlist-details *ngIf="mode === 'details'" data-placki />
     <!-- </ng-template> -->
 
-    
+    <!-- Template MicroSyntax -->
+    <app-playlist-details
+      *ngIf="mode === 'details'; then detailsTplRef; else editorTplRef"
+    />
 
     <!-- Error: NG0201: No provider for TemplateRef found. Find more at https://angular.io/errors/NG0201 -->
     <!-- <app-playlist-details [ngIf]="true" /> -->
