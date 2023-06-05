@@ -1,10 +1,13 @@
 <div class="row">
   <div class="col">
     <app-playlist-list />
-    <app-playlist-editor />
   </div>
   <div class="col">
-    <app-playlist-details />
-    <app-playlist-editor />
+    <button class="btn btn-primary mt-2" (click)="(0)">Edit</button>
+    <button class="btn btn-danger">Details</button>
+    {{ mode }}
+
+    <app-playlist-details [hidden]="false" />
+    <app-playlist-editor [hidden]="true" />
   </div>
 </div>
