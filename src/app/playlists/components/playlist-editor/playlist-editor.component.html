@@ -8,10 +8,15 @@
     id="playlist_name"
     placeholder="Name"
     [value]="playlist.name"
-
-    (input)=" playlist.name = $any( $event.target ).value "
+    #nameInputRef
   />
-  <small class="text-muted float-end">{{ playlist.name.length }} / 100</small>
+  <!-- (input)=" playlist.name = $any( $event.target ).value " -->
+
+  <small class="text-muted float-end"
+    >{{ nameInputRef.value.length }} / 100</small
+  >
+
+  <!-- <small class="text-muted float-end">{{ playlist.name.length }} / 100</small> -->
 </div>
 
 <div class="form-check">
@@ -20,6 +25,7 @@
     type="checkbox"
     id="playlist_public"
     [checked]="playlist.public"
+    (click)="(0)"
   />
   <label class="form-check-label" for="playlist_public"> Public </label>
 </div>
