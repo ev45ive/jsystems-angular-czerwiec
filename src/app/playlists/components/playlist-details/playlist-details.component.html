@@ -8,33 +8,6 @@
 
   <dt>Public</dt>
 
-  <!-- Single style values -->
-  <dd [style.color]="playlist.public ? 'red' : 'green'">
-    {{ playlist.public ? "Yes" : "No" }}
-  </dd>
-  
-  <!-- Multiple styles values -->
-  <dd
-    [ngStyle]="{
-      color: playlist.public ? 'red' : 'green',
-      borderBottom: '1px solid '
-    }"
-  >
-    {{ playlist.public ? "Yes" : "No" }}
-  </dd>
-
-  <!-- ---- -->
-  <dd [class]="playlist.public ? 'isPublic' : 'isPrivate'">
-    {{ playlist.public ? "Yes" : "No" }}
-  </dd>
-
-  <!-- Single Classes on/off -->
-  <dd [class.isPublic]="playlist.public" 
-      [class.isPrivate]="!playlist.public">
-    {{ playlist.public ? "Yes" : "No" }}
-  </dd>
-
-
   <!-- Multiple Classes on/off -->
   <dd
     [ngClass]="{
@@ -54,3 +27,31 @@
 <!-- {{ text }} -->
 <!-- [props]=value -->
 <!-- [attr.name]=value -->
+
+<!-- 
+
+
+
+  <dd [style.color]="playlist.public ? 'red' : 'green'">
+    {{ playlist.public ? "Yes" : "No" }}
+  </dd>
+  <dd
+    [ngStyle]="{
+      color: playlist.public ? 'red' : 'green',
+      borderBottom: '1px solid '
+    }"
+  >
+    {{ playlist.public ? "Yes" : "No" }}
+  </dd>
+
+  <dd [class]="playlist.public ? 'isPublic' : 'isPrivate'">
+    {{ playlist.public ? "Yes" : "No" }}
+  </dd>
+
+  <dd [class.isPublic]="playlist.public" 
+      [class.isPrivate]="!playlist.public">
+    {{ playlist.public ? "Yes" : "No" }}
+  </dd>
+
+
+ -->
