@@ -10,23 +10,12 @@
   <a
     href="#"
     *ngFor="let playlist of playlists; index as i"
+
+
+    *appProduct="let product; where { price: 100 } order 'name' "
+
     class="list-group-item list-group-item-action"
   >
     {{ i + 1 }}. {{ playlist.name }}
   </a>
 </div>
-
-<!-- 
- 
-  for(let playlist of playlists){
-    for(let track =  $implicit of tracks){
-      playlist
-      track
-    }
-  }
-
-
-  for(item of items){
-    item.name 
-  }
- -->
