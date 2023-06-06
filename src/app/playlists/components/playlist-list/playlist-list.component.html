@@ -1,15 +1,15 @@
 <div class="list-group">
   <!-- <ng-template ngFor [ngForOf]="playlists" let-playlist="$implicit" let-i="index"> -->
 
-  <ng-template ngFor [ngForOf]="playlists" let-playlist let-i="index">
+  <!-- <ng-template ngFor [ngForOf]="playlists" let-playlist let-i="index">
     <a href="#" class="list-group-item list-group-item-action">
       {{ i + 1 }}. {{ playlist.name }}
     </a>
-  </ng-template>
+  </ng-template> -->
 
   <a
     href="#"
-    *ngFor="let playlist = $implicit of playlists; let i = index"
+    *ngFor="let playlist of playlists; index as i"
     class="list-group-item list-group-item-action"
   >
     {{ i + 1 }}. {{ playlist.name }}
