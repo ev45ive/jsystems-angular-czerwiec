@@ -30,4 +30,10 @@ export class PlaylistListComponent {
       description: 'Cool playlist',
     },
   ];
+
+  selectedId = '234'
+
+  select(id:string){
+    /// ???
+  }
 }

@@ -1,21 +1,12 @@
 <div class="list-group">
-  <!-- <ng-template ngFor [ngForOf]="playlists" let-playlist="$implicit" let-i="index"> -->
-
-  <!-- <ng-template ngFor [ngForOf]="playlists" let-playlist let-i="index">
-    <a href="#" class="list-group-item list-group-item-action">
-      {{ i + 1 }}. {{ playlist.name }}
-    </a>
-  </ng-template> -->
-
   <a
     href="#"
     *ngFor="let playlist of playlists; index as i"
-
-
-    *appProduct="let product; where { price: 100 } order 'name' "
-
-    class="list-group-item list-group-item-action"
+    class="list-group-item list-group-item-action active"
+    click
   >
     {{ i + 1 }}. {{ playlist.name }}
   </a>
 </div>
+
+{{selectedId}}
