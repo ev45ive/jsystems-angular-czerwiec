@@ -10,5 +10,20 @@
       <app-playlist-details *ngSwitchDefault />
       <app-playlist-editor *ngSwitchCase="'editor'" />
     </ng-container>
+
+    <!-- 
+      <app-playlist-details *ngIf="mode === 'details' " />
+      <app-playlist-editor *ngIf="mode === 'editor'" />
+     -->
+
+     <!-- 
+      {{ text }}
+      [ props ]
+      | json
+      (event) = $event
+      #localRef 
+      * ng-template
+     -->
+
   </div>
 </div>
